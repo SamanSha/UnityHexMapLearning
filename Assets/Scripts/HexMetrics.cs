@@ -48,6 +48,12 @@ public class HexMetrics {
 
     public const float waterBlendFactor = 1f - waterFactor;
 
+    public const float wallHeight = 3f;
+
+    public const float wallThickness = 0.75f;
+
+    public const float wallElevationOffset = verticalTerraceStepSize;
+
     public const int hashGridSize = 256;
 
     static HexHash[] hashGrid;
@@ -169,5 +175,22 @@ public class HexMetrics {
         position.x += (sample.x * 2f - 1f) * cellPerturbStrength;
         position.z += (sample.z * 2f - 1f) * cellPerturbStrength;
         return position;
+    }
+
+    public static Vector3 WallThicknessOffset (Vector3 near, Vector3 far) {
+        Vector3 offset;
+        offset.x = far.x - near.x;
+        offset.y = 0f;
+        offset.z = far.z - near.z;
+        return offset.normalized * (wallThickness * 0.5f);
+    }
+
+    public static Vector3 WallLerp (Vector3 near, Vector3 far) {
+        near.x += (far.x - near.x) * 0.5f;
+        near.z += (far.z - near.z) * 0.5f;
+        float v =
+            near.y < far.y ? wallElevationOffset : (1f - wallElevationOffset);
+        near.y += (far.y - near.y) * v;
+        return near;
     }
 }
