@@ -82,6 +82,9 @@ public class HexMapEditor : MonoBehaviour {
             if (applyWaterLevel) {
                 cell.WaterLevel = activeWaterLevel;
             }
+            if (applySpecialIndex) {
+                cell.SpecialIndex = activeSpecialIndex;
+            }
             if (applyUrbanLevel) {
                 cell.UrbanLevel = activeUrbanLevel;
             }
@@ -117,11 +120,11 @@ public class HexMapEditor : MonoBehaviour {
     int activeElevation;
     int activeWaterLevel;
 
-    int activeUrbanLevel, activeFarmLevel, activePlantLevel;
+    int activeUrbanLevel, activeFarmLevel, activePlantLevel, activeSpecialIndex;
 
     bool applyColor;
 
-    bool applyUrbanLevel, applyFarmLevel, applyPlantLevel;
+    bool applyUrbanLevel, applyFarmLevel, applyPlantLevel, applySpecialIndex;
 
     public void SelectColor (int index) {
         applyColor = index >= 0;
@@ -193,6 +196,14 @@ public class HexMapEditor : MonoBehaviour {
 
     public void SetWalledMode (int mode) {
         walledMode = (OptionalToggle)mode;
+    }
+
+    public void SetApplySpecialIndex (bool toggle) {
+        applySpecialIndex = toggle;
+    }
+
+    public void SetSpecialIndex (float index) {
+        activeSpecialIndex = (int)index;
     }
 
     void ValidateDrag (HexCell currentCell) {
