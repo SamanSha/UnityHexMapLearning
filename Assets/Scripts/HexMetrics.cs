@@ -70,6 +70,8 @@ public class HexMetrics {
         new float[] {0.4f, 0.6f, 0.8f}
     };
 
+    public static Color[] colors;
+
     public static float[] GetFeatureThresholds (int level) {
         return featureThresholds[level];
     }
