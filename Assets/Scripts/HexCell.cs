@@ -18,12 +18,6 @@ public class HexCell : MonoBehaviour {
 
     public HexGridChunk chunk;
 
-    public Color Color {
-        get {
-            return HexMetrics.colors[terrainTypeIndex];
-        }
-    }
-
     public int TerrainTypeIndex {
         get {
             return terrainTypeIndex;

@@ -4103,7 +4103,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Wh
+  m_Text: Sw
 --- !u!222 &519949231
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6364,7 +6364,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Bl
+  m_Text: Md
 --- !u!222 &827998094
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8051,7 +8051,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Or
+  m_Text: Stn
 --- !u!222 &1020778285
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8991,12 +8991,6 @@ MonoBehaviour:
   chunkPrefab: {fileID: 8221160726888236517, guid: b7ef490e616baff4ca47f28a728b127a, type: 3}
   noiseSource: {fileID: 2800000, guid: a94ea9b76bc6af247adc3ec8d760cfc1, type: 3}
   seed: 1234
-  colors:
-  - {r: 1, g: 0.86274517, b: 0, a: 0}
-  - {r: 0.003921569, g: 0.68235296, b: 0.03137255, a: 0}
-  - {r: 0.07450981, g: 0.21960786, b: 0.83921576, a: 0}
-  - {r: 1, g: 0.30588236, b: 0.10588236, a: 0}
-  - {r: 1, g: 1, b: 1, a: 0}
 --- !u!4 &1167419441
 Transform:
   m_ObjectHideFlags: 0
@@ -11401,7 +11395,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Gr
+  m_Text: Grs
 --- !u!222 &1549721615
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15999,7 +15993,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ye
+  m_Text: Snd
 --- !u!222 &2146250924
 CanvasRenderer:
   m_ObjectHideFlags: 0
