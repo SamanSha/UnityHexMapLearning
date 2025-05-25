@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Rendering;
 using System.IO;
 
@@ -55,6 +57,23 @@ public class HexCell : MonoBehaviour {
     }
 
     int elevation = int.MinValue;
+
+    public int Distance {
+        get {
+            return distance;
+        }
+        set {
+            distance = value;
+            UpdateDistanceLabel();
+        }
+    }
+
+    int distance;
+
+    void UpdateDistanceLabel () {
+        TextMeshProUGUI label = uiRect.GetComponent<TextMeshProUGUI>();
+        label.text = distance == int.MaxValue ? "" : distance.ToString();
+    }
 
     void RefreshPosition () {
         Vector3 position = transform.localPosition;
