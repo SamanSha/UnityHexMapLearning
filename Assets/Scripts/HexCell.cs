@@ -83,6 +83,8 @@ public class HexCell : MonoBehaviour {
 
     public int SearchPhase { get; set; }
 
+    public HexUnit Unit { get; set; }
+
     public void SetLabel (string text) {
         TextMeshProUGUI label = uiRect.GetComponent<TextMeshProUGUI>();
         label.text = text;
@@ -433,6 +435,9 @@ public class HexCell : MonoBehaviour {
 
     void RefreshSelfOnly () {
         chunk.Refresh();
+        if (Unit) {
+            Unit.ValidateLocation();
+        }
     }
 
     void Refresh () {
@@ -443,6 +448,9 @@ public class HexCell : MonoBehaviour {
                 if (neighbor != null && neighbor.chunk != chunk) {
                     neighbor.chunk.Refresh();
                 }
+            }
+            if (Unit) {
+                Unit.ValidateLocation();
             }
         }
     }
