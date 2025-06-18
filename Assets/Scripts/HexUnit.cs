@@ -54,6 +54,12 @@ public class HexUnit : MonoBehaviour {
         }
     }
 
+    public int VisionRange {
+        get {
+            return 3;
+        }
+    }
+
     void OnEnable () {
         if (location) {
             transform.localPosition = location.Position;
