@@ -494,6 +494,10 @@ public class HexCell : MonoBehaviour {
         }
     }
 
+    public void SetMapData (float data) {
+        ShaderData.SetMapData(this, data);
+    }
+
     void RefreshSelfOnly () {
         chunk.Refresh();
         if (Unit) {
